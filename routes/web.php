@@ -25,10 +25,10 @@ Route::get('/{idproduto}/carrinho/adicionar', [ProdutoController::class, 'adicio
 Route::get('/carrinho', [ProdutoController::class, 'verCarrinho'])->name('ver_carrinho');
 Route::get('/{indice}/carrinho', [ProdutoController::class, 'excluirCarrinho'])->name('carrinho_excluir');
 Route::post('/carrinho/finalizar', [ProdutoController::class, 'finalizar'])->name('carrinho_finalizar');
-
-
+Route::get('/compras/historico', [ProdutoController::class, 'historico'])->name('compra_historico');
+Route::post('/atualizar-quantidade', [ProdutoController::class,'atualizarQuantidade'])->name('carrinho.atualizar_quantidade');
+Route::post('/compras/detalhes', [ProdutoController::class,'detalhes'])->name('compra_detalhes');
 
 Route::get('/resultados',[ProdutoController::class, 'mostrarResultados'])->name('resultados');
 
-
-Route::get('/compras/historico', [ProdutoController::class, 'historico'])->name('compra_historico');
+Route::get('/produto/{id}', [ProdutoController::class, 'mostrarDetalhes'])->name('detalhes_produto');

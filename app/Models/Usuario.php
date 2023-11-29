@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+/*namespace App\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -17,7 +17,7 @@ class Usuario extends RModel implements Authenticatable
   protected $table = "USUARIO";
   protected $fillable = ['USUARIO_NOME', 'USUARIO_EMAIL', 'USUARIO_SENHA', 'USUARIO_CPF'];
   public $timestamps = false;
- /* protected $primaryKey = "USUARIO_ID";*/
+ // protected $primaryKey = "USUARIO_ID";
   protected $hidden = ['USUARIO_SENHA'];
   
   
@@ -46,5 +46,5 @@ class Usuario extends RModel implements Authenticatable
 
    
 
-}
+}*/
 

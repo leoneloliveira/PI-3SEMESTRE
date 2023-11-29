@@ -39,6 +39,12 @@ class User extends Authenticatable
 // Especifique explicitamente o nome da chave estrangeira se for diferente de 'USUARIO_ID'
        return $this->hasOne(Endereco::class, 'USUARIO_ID');
    }
+
+
+   public function itens()
+   {
+       return $this->hasMany(ItemCarrinho::class, 'USUARIO_ID');
+   }
     /**
      * The attributes that should be cast.
      *

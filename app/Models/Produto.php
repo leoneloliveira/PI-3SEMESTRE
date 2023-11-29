@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Produto extends Model
+class Produto extends RModel
 {
     use HasFactory;
 
@@ -19,7 +19,8 @@ class Produto extends Model
         return $this->hasMany(Imagem::class, 'PRODUTO_ID');
     }
 
-    public function categoria() {
-        return $this->belogsTo(Categoria::class, 'CATEGORIA_ID');
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'CATEGORIA_ID');
     }
 }
